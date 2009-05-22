@@ -1,0 +1,41 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+    <title>The Pitcam!</title>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="minimum-scale=1.0, width=device-width, maximum-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="YES">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon" href="Images/WebClipIcon.png">
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" type="text/css" href="Parts/Transitions.css">
+    <script type="text/javascript" src="Parts/utilities.js" charset="utf-8"></script>
+    <script type="text/javascript" src="Parts/setup.js" charset="utf-8"></script>
+    <script type="text/javascript" src="main.js" charset="utf-8"></script>
+    <script type="text/javascript" src="Parts/Transitions.js" charset="utf-8"></script>
+    <script type="text/javascript" src="Parts/StackLayout.js" charset="utf-8"></script>
+    <script type="text/javascript" src="Parts/PushButton.js" charset="utf-8"></script>
+    <script type="text/javascript" src="Parts/ButtonHandler.js" charset="utf-8"></script>
+    <script type="text/javascript" src="Parts/Text.js" charset="utf-8"></script>
+    <script type="text/javascript" src="Parts/MapButton.js" charset="utf-8"></script>
+    <script type="text/javascript" src="Parts/CallButton.js" charset="utf-8"></script>
+</head>
+<body onload="load();">
+    <div apple-part="com.apple.Dashcode.part.StackLayout" id="sides"><div id="front" apple-part-locked="true"><img src="Images/tv-white-noise.gif" id="TVStatic">
+            <div apple-part="com.apple.Dashcode.part.StackLayout" id="pitcams"><div id="new" apple-part-locked="true">
+                    <canvas apple-part="com.apple.Dashcode.part.canvas" class="apple-canvas apple-no-children" width="300" height="225" id="newCam"></canvas>
+                </div><div id="old" apple-part-locked="true">
+                    <canvas apple-part="com.apple.Dashcode.part.canvas" class="apple-canvas apple-no-children" width="300" height="225" id="oldCam"></canvas>
+                </div></div>
+            <img src="Images/pitcam-metal.png" id="metal">
+            <div apple-part="com.apple.Dashcode.part.lozengepushbutton" class="apple-no-children" apple-text-overflow="ellipsis" apple-style="image-theme: 0; image-shape: 1; image-button-type: 0; image-opacity: 1.00; image-top-color: 0.431494623,0.651758611,0.988738835,1; image-bottom-color: 1,1,1,1; image-radius: 22,22,22,22; image-border: 1; image-border-color: 0,0,0,0.2; image-border-width: 1; shine-on: 1; shine-strength: 0.17; shine-alpha-level: 0.04; shine-height: 0.50; glass-arc-height: 0.00; embossed-on: 1; embossed-depth: 1; embossed-shadow: 0.68; embossed-highlight: 0.3; shadow-include-shadow: 0;" id="new-pitcam"></div>
+            <div apple-part="com.apple.Dashcode.part.lozengepushbutton" class="apple-no-children" apple-text-overflow="ellipsis" apple-style="image-theme: 0; image-shape: 1; image-button-type: 0; image-opacity: 1.00; image-top-color: 0.431494623,0.651758611,0.988738835,1; image-bottom-color: 1,1,1,1; image-radius: 22,22,22,22; image-border: 1; image-border-color: 0,0,0,0.2; image-border-width: 1; shine-on: 1; shine-strength: 0.17; shine-alpha-level: 0.04; shine-height: 0.50; glass-arc-height: 0.00; embossed-on: 1; embossed-depth: 1; embossed-shadow: 0.68; embossed-highlight: 0.3; shadow-include-shadow: 0;" id="old-pitcam"></div>
+            <div apple-part="com.apple.Dashcode.part.webtext" class="apple-text apple-no-children" apple-default-image-visibility="hidden" apple-text-overflow="ellipsis" id="viewer3000"></div>
+            <div apple-part="com.apple.Dashcode.part.pushbutton" class="apple-no-children" apple-text-overflow="ellipsis" apple-style="image-theme: 3; image-shape: 3; image-button-type: 0; image-opacity: 1.00; image-top-color: 0,0,0,1; image-bottom-color: 1,1,1,1; image-radius: 0,0,0,0; image-border: 0; image-border-color: 0,0,0,0.2; image-border-width: 1; shine-on: 1; shine-strength: 0.17; shine-alpha-level: 0.04; shine-height: 0.50; glass-arc-height: 0.00; embossed-on: 1; embossed-depth: 1; embossed-shadow: 0.68; embossed-highlight: 0.3; shadow-include-shadow: 0;" id="infoButton" checked="checked"></div>
+        </div><div id="back" apple-part-locked="true"><img src="Images/back-pattern.jpg" id="pattern">
+            <div apple-part="com.apple.Dashcode.part.mapbutton" class="apple-no-children" apple-text-overflow="ellipsis" apple-style="image-theme: 0; image-shape: 3; image-button-type: 0; image-opacity: 1.00; image-top-color: 0.410055697,0.410055697,0.410055697,1; image-bottom-color: 0.711956501,0.68358171,0.642360091,1; image-radius: 6,6,6,6; image-border: 1; image-border-color: 0.529399991,0.529399991,0.529399991,1; image-border-width: 1; shine-on: 1; shine-strength: 0.17; shine-alpha-level: 0.04; shine-height: 0.50; glass-arc-height: 0.01; embossed-on: 1; embossed-depth: 1; embossed-shadow: 0.6; embossed-highlight: 0.32; shadow-include-shadow: 0;" id="mapButton1"></div>
+            <div apple-part="com.apple.Dashcode.part.callbutton" class="apple-no-children" apple-text-overflow="ellipsis" apple-style="image-theme: 0; image-shape: 3; image-button-type: 0; image-opacity: 1.00; image-top-color: 0.410055697,0.410055697,0.410055697,1; image-bottom-color: 0.346834272,0.733695626,0.392721534,1; image-radius: 6,6,6,6; image-border: 1; image-border-color: 0.529399991,0.529399991,0.529399991,1; image-border-width: 1; shine-on: 1; shine-strength: 0.17; shine-alpha-level: 0.04; shine-height: 0.50; glass-arc-height: 0.01; embossed-on: 1; embossed-depth: 1; embossed-shadow: 0.6; embossed-highlight: 0.32; shadow-include-shadow: 0;" id="callButton1"></div>
+            <div apple-part="com.apple.Dashcode.part.pushbutton" class="apple-no-children" apple-text-overflow="ellipsis" apple-style="image-theme: 0; image-shape: 3; image-button-type: 0; image-opacity: 1.00; image-top-color: 0.552925944,0.552925944,0.552925944,1; image-bottom-color: 1,1,1,1; image-radius: 5,5,5,5; image-border: 1; image-border-color: 0,0,0,0.2; image-border-width: 1; shine-on: 1; shine-strength: 0.16; shine-alpha-level: 0.00; shine-height: 0.50; glass-arc-height: 0.00; embossed-on: 1; embossed-depth: 1; embossed-shadow: 0.68; embossed-highlight: 0.3; shadow-include-shadow: 0;" id="done"></div>
+            <img src="Images/createdby.png" id="jeffd" onclick="goToJeffD(event)"></div></div>
+</body>
+</html>
