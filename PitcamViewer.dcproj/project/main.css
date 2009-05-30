@@ -84,18 +84,9 @@ body {
     top: 0px;
 }
 
-#metal {
-    width: 320px;
-    height: 460px;
-    position: absolute;
-    right: auto;
-    top: 0px;
-    left: 0px;
-}
-
 #new-pitcam {
     color: rgb(255, 255, 255);
-    text-shadow: rgba(0, 0, 0, 0.546875) 0px -1px 0px;
+    text-shadow: rgba(0, 0, 0, 0.535156) 0px -1px 0px;
     text-align: center;
     text-overflow: ellipsis;
     white-space: nowrap;
@@ -117,7 +108,7 @@ body {
 
 #old-pitcam {
     color: rgb(255, 255, 255);
-    text-shadow: rgba(0, 0, 0, 0.542969) 0px -1px 0px;
+    text-shadow: rgba(0, 0, 0, 0.53125) 0px -1px 0px;
     text-align: center;
     text-overflow: ellipsis;
     white-space: nowrap;
@@ -168,7 +159,7 @@ body {
     font-size: 12px;
     color: rgb(255, 255, 255);
     text-align: center;
-    text-shadow: rgba(0, 0, 0, 0.570312) 0px -1px 0px;
+    text-shadow: rgba(0, 0, 0, 0.558594) 0px -1px 0px;
     text-overflow: ellipsis;
     white-space: nowrap;
     -webkit-dashboard-region: dashboard-region(control rectangle);
@@ -187,7 +178,7 @@ body {
     font-weight: bold;
     color: rgb(255, 255, 255);
     text-align: center;
-    text-shadow: rgba(0, 0, 0, 0.570312) 0px -1px 0px;
+    text-shadow: rgba(0, 0, 0, 0.558594) 0px -1px 0px;
     text-overflow: ellipsis;
     -webkit-dashboard-region: dashboard-region(control rectangle);
     -webkit-margin-top-collapse: separate;
@@ -208,7 +199,7 @@ body {
     font-weight: bold;
     color: rgb(255, 255, 255);
     text-align: center;
-    text-shadow: rgba(0, 0, 0, 0.570312) 0px -1px 0px;
+    text-shadow: rgba(0, 0, 0, 0.558594) 0px -1px 0px;
     text-overflow: ellipsis;
     -webkit-dashboard-region: dashboard-region(control rectangle);
     position: absolute;
@@ -254,7 +245,7 @@ body {
     position: absolute;
     bottom: auto;
     margin-top: 0px;
-    text-shadow: rgba(0, 0, 0, 0.367188) 0px -1px 0px;
+    text-shadow: rgba(0, 0, 0, 0.355469) 0px -1px 0px;
     color: rgb(255, 255, 255);
     font-weight: bold;
     width: 57px;
@@ -285,4 +276,26 @@ body {
     margin-top: 0px;
     top: 407px;
     left: 8px;
+}
+
+#metal-top {
+    width: 320px;
+    height: 246px;
+    position: absolute;
+    right: auto;
+    bottom: auto;
+    margin-top: 0px;
+    left: 0px;
+    top: 0px;
+}
+
+#metal-bottom {
+    width: 320px;
+    height: 214px;
+    position: absolute;
+    right: auto;
+    bottom: auto;
+    margin-top: 0px;
+    left: 0px;
+    top: 246px;
 }
