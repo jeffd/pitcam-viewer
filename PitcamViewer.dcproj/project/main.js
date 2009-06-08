@@ -1,5 +1,5 @@
 
-var urlRoot ="http://pitcam.ccs.neu.edu/";
+var urlRoot ="http://pitcamproxy.appspot.com/";
 
 function load()
 {
